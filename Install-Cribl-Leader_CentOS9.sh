@@ -64,7 +64,7 @@ sudo curl -Lso - $(curl -s https://cdn.cribl.io/dl/latest) | sudo tar zxvf - -C 
 sudo chown -R $CriblUser:$CriblUser $InstallDir
 
 # Configure the cribl user’s .bash_profile so that Cribl_Home = your installation directory
-echo "CRIBL_HOME=$InstallDir" | tee -a /home/cribl/.bash_profile
+echo "CRIBL_HOME=$InstallDir/cribl" | tee -a /home/cribl/.bash_profile
 
 # Configure the cribl user’s .bash_profile so that Cribl_Home = your installation directory
 sudo systemctl enable $CriblUser
