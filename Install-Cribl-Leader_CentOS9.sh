@@ -61,7 +61,7 @@ sudo chown -R $CriblUser:$CriblUser /home/$CriblUser/.ssh
 # Download & install the latest version of Cribl Stream
 sudo mkdir $InstallDir
 sudo curl -Lso - $(curl -s https://cdn.cribl.io/dl/latest) | sudo tar zxvf - -C $InstallDir
-sudo chown -R cribl:cribl $InstallDir
+sudo chown -R $CriblUser:$CriblUser $InstallDir
 
 # Configure the cribl user’s .bash_profile so that Cribl_Home = your installation directory
 echo "CRIBL_HOME=$InstallDir" | tee -a /home/cribl/.bash_profile
