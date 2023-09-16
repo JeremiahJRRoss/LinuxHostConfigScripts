@@ -14,3 +14,13 @@
 >Optional Pre-Script:You can create a new application user by uncommenting lines in the optional pre-script
 >
 
+## Installing commonly used applications
+
+### Install a Cribl Stream Leader
+
+#### CentOS9:
+
+>What it does: Install a Cribl Stream Leader using Cribl's latest Linux package
+>
+>Description: This script will create a user to run Cribl, install cribl, apply permissions, configure systemd to enable cribl, and then start cribl
+>
