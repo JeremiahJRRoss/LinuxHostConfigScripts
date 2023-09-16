@@ -11,6 +11,6 @@
 >
 >Description: This script will install certs from Let's Encrypt, copy them to a directory in /opt/ for use by other applications, create a script in /opt to update the certs, and then update crontab to run that script daily.
 >
->Optional Pre-Script: There is also an option to create a new application user, if uncomment lines in the pre-script section.
+>Optional Pre-Script:You can create a new application user by uncommenting lines in the optional pre-script
 >
 
