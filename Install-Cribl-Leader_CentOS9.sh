@@ -51,9 +51,13 @@ sudo dnf install -y jq git tar wget
 sudo adduser $CriblUser
 sudo usermod -aG wheel $CriblUser
 sudo mkdir /home/$CriblUser/.ssh
-sudo chmod 755 /home/$CriblUser
-sudo chown -R $CriblUser:$CriblUser /home/$CriblUser
 sudo chmod 700 /home/$CriblUser/.ssh
+sudo touch /home/$CriblUser/.ssh/authorized_keys
+sudo chmod 600 /home/$CriblUser/.ssh/authorized_keys
+sudo touch /home/$CriblUser/.ssh/known_hosts
+sudo chmod 600 /home/$CriblUser/.ssh/known_hosts
+sudo touch /home/$CriblUser/.ssh/config
+sudo chmod 600 /home/$CriblUser/.ssh/config
 sudo chown -R $CriblUser:$CriblUser /home/$CriblUser/.ssh
 
 # Download & install the latest version of Cribl Stream
