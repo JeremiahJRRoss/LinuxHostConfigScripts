@@ -3,8 +3,8 @@
 ## Securing your Linux Host 
 
 #### Create TLS certificates with Let's Encrypt and confgure Auto Renew
-##### CentOS9
-**TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh**
+**CentOS9**
+[TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh)
 ```
 What it does: Create & automate renewal of TLS certs using Let's Encrypt on a CentOS9 Host
 
