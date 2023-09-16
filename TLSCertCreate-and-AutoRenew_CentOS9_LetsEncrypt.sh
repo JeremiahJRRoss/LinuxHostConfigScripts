@@ -25,9 +25,11 @@
 ### cd /opt
 
 ### sudo vi TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh
-### (Copy this script into VI after entering into edit mode)
+### (Enter into edit mode - you may do this by hitting the "a" key once)
+### (Copy this script into VI after entering into edit mode - be sure not to accidentally add any characters to the script)
 ### (Update the variables in this script or you will have a bad time) 
-### (Close vi with :wq)
+### (Hit the escape key to exit out of edit mode - be sure not to accidentally add any characters to the script)
+### (Close vi and save by typing ":wq")
 
 ### sudo chmod +x TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh
 ### sudo ./TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh
