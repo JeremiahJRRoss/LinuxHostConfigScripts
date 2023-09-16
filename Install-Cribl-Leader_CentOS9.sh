@@ -50,7 +50,6 @@ sudo dnf install -y jq git tar wget
 # Create a user named cribl to run the cribl service and create an .ssh file
 sudo adduser $CriblUser
 sudo mkdir /home/$CriblUser/.ssh
-sudo chmod 700 /home/$CriblUser/.ssh
 sudo touch /home/$CriblUser/.ssh/authorized_keys
 sudo chmod 600 /home/$CriblUser/.ssh/authorized_keys
 sudo touch /home/$CriblUser/.ssh/known_hosts
