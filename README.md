@@ -19,7 +19,7 @@
 ### Install a Cribl Stream Leader
 
 #### CentOS9:
-[Install-Cribl-Leader_CentOS9.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/Install-Cribl-Leader_CentOS9.sh)
+[Install-Cribl-Leader_CentOS9.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/TLSCertCreate-and-AutoRenew_CentOS9_LetsEncrypt.sh)
 >What it does: Install a Cribl Stream Leader using Cribl's latest Linux package
 >
 >Description: This script will create a user to run Cribl, install cribl, apply permissions, configure systemd to enable cribl, and then start cribl
