@@ -28,7 +28,6 @@ for i in "${PortsToOpen[@]}"
 do
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/tcp
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/udp
-   # or do whatever with individual element of the array
 done
 
 sudo firewall-cmd --permanent --zone=$NewZone --set-target=DROP
