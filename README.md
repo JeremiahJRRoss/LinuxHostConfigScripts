@@ -1,5 +1,6 @@
 # Script Directory
 
+
 ## Securing your Linux Host 
 
 ### Create TLS certificates with Let's Encrypt and confgure Auto Renew
@@ -14,8 +15,11 @@
 >Optional Pre-Script:You can create a new application user by uncommenting lines in the optional pre-script
 >
 
+
 ### Configure Firewalld: Create a new zone, add port rules, apply the zone to an interface
+
 #### CentOS9, RHEL9, Fedora 
+
 [Firewalld_Create-and-Apply-Zone-with-Ports.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/Firewalld_Create-and-Apply-Zone-with-Ports.sh)
 >What it does: Create a new zone, creates rules that open ports for UDP & TCP, applies a zone to an interface
 >
@@ -28,6 +32,7 @@
 ### Install a Cribl Stream Leader
 
 #### CentOS9:
+
 [Install-Cribl-Leader_CentOS9.sh](https://github.com/JeremiahJRRoss/LinuxHostConfigScripts/blob/main/Install-Cribl-Leader_CentOS9.sh)
 >What it does: Install a Cribl Stream Leader using Cribl's latest Linux package
 >
