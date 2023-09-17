@@ -39,6 +39,9 @@ InstallDir="/opt/cribl-stream"
 ##  --- CUSTOM VARIABLE 2 OF 2 - ENTER THE USER THAT WILL RUN CRIBL HERE. The default is cribl ---
 CriblUser="cribl"
 
+
+#--- THE ACTUAL SCRIPT ---
+
 # Install the epel-release repos for dependencies
 sudo dnf install \
     https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm \
