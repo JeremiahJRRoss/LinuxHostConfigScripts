@@ -43,7 +43,7 @@ CriblUser="cribl"
 #--- THE ACTUAL SCRIPT ---
 
 # Install the epel-release repos for dependencies
-sudo dnf install \
+yes | sudo dnf install \
     https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm \
     https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm
 
