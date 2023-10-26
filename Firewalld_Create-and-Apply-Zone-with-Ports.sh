@@ -21,25 +21,39 @@ declare -a ZonedInterfaces=("eth1")
  
 declare -a PortsToOpen=("514" "10020" "10030")
 
+#---- Begin Script ----
+## Create a new zone and add both ssh & dhcpv6-client 
+
 sudo firewall-cmd --permanent --new-zone=$NewZone
 sudo firewall-cmd --permanent --add-service=ssh --zone=$NewZone
 sudo firewall-cmd --permanent --add-service=dhcpv6-client --zone=$NewZone
-## now loop through the above array
+
+## now loop through the "PortsToOpen" array to add ports to your new zone
+
 for i in "${PortsToOpen[@]}"
 do
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/tcp
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/udp
 done
+
+## Configure your new zone to drop all packets not in this list of rules
+
 sudo firewall-cmd --permanent --zone=$NewZone --set-target=DROP
+
+## now loop through the "ZonedInterfaces" array to bind your new zone to the desired interfaces
 
 for i in "${ZonedInterfaces[@]}"
 do
 sudo firewall-cmd --permanent --zone=$NewZone --change-interface="$i"
 done
 
+## print a list of the rules in your active zone 
+sudo firewall-cmd --zone=$NewZone --list-all
 
-sudo firewall-cmd --permanent --zone=$NewZone --change-interface=$ZonedInterfaces
+## restart firewalld so that changes take effect
 sudo systemctl restart firewalld.service
+
+## print a list of all active zones
 sudo firewall-cmd --get-active-zones
-sudo firewall-cmd --zone=public --list-all
+
 
