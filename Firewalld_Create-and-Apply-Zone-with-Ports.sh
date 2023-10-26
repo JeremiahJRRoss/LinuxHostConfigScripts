@@ -44,16 +44,17 @@ sudo firewall-cmd --permanent --zone=$NewZone --set-target=DROP
 
 for i in "${ZonedInterfaces[@]}"
 do
-sudo firewall-cmd --permanent --zone=$NewZone --change-interface="$i"
+sudo firewall-cmd --permanent --zone=$NewZone --change-interface=$i
 done
-
-## print a list of the rules in your active zone 
-sudo firewall-cmd --zone=$NewZone --list-all
 
 ## restart firewalld so that changes take effect
 sudo systemctl restart firewalld.service
 
 ## print a list of all active zones
 sudo firewall-cmd --get-active-zones
+
+## print a list of the rules in your active zone 
+sudo firewall-cmd --zone=$NewZone --list-all
+
 
 
