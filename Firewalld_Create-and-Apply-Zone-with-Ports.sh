@@ -22,15 +22,22 @@ declare -a ZonedInterfaces=("eth1")
 declare -a PortsToOpen=("514" "10020" "10030")
 
 sudo firewall-cmd --permanent --new-zone=$NewZone
-
+sudo firewall-cmd --permanent --add-service=ssh --zone=$NewZone
+sudo firewall-cmd --permanent --add-service=dhcpv6-client --zone=$NewZone
 ## now loop through the above array
 for i in "${PortsToOpen[@]}"
 do
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/tcp
    sudo firewall-cmd --permanent --zone=$NewZone --add-port="$i"/udp
 done
-
 sudo firewall-cmd --permanent --zone=$NewZone --set-target=DROP
+
+for i in "${ZonedInterfaces[@]}"
+do
+sudo firewall-cmd --permanent --zone=$NewZone --change-interface="$i"
+done
+
+
 sudo firewall-cmd --permanent --zone=$NewZone --change-interface=$ZonedInterfaces
 sudo systemctl restart firewalld.service
 sudo firewall-cmd --get-active-zones
